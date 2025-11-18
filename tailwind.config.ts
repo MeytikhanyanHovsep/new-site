@@ -8,24 +8,18 @@ export default {
     ],
     theme: {
         screens: {
-            xl: { max: "1100px" },
-            lg: { max: "1000px" },
-            md: { max: "850px" },
-            sm: { max: "550px" },
-            xs: { max: "320px" },
+            xs: "320px",
+            sm: "550px",
+            md: "850px",
+            lg: "1000px",
+            xl: "1100px",
+            "2xl": "1280px",
         },
         colors: {
             deep: "#0F172B",
             current: "#fea116",
             gray: "#666565",
         },
-        // extend: {
-        //     fontFamily: {
-        //         nunito: ["Nunito", "sans-serif"],
-        //         pacifico: ["Pacifico", "sans-serif"],
-        //         heebo: ["Heebo", "sans-serif"],
-        //     },
-        // },
     },
     plugins: [],
 } satisfies Config;

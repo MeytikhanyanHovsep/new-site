@@ -1,0 +1,53 @@
+import React from "react";
+import Image from "next/image";
+
+const OurTeam = () => {
+    const teamMembers = [
+        {
+            name: "Артур Султанов",
+            position: "Дезинфектор, 12 лет стажа",
+            photo: "/team/team-1.jpg",
+        },
+        {
+            name: "Баранов Сергей",
+            position: "Дезинсектор, 10 лет стажа",
+            photo: "/team/team-2.jpg",
+        },
+        {
+            name: "Семенюк Анатолий",
+            position: "Специалист фумигации, 8 лет стажа",
+            photo: "/team/team-3.jpg",
+        },
+        {
+            name: "Кравченко Владимир",
+            position: "Дератизация, 12 лет опыта",
+            photo: "/team/team-4.jpg",
+        },
+    ];
+
+    return (
+        <section className="team content">
+            <h2>Наша команда</h2>
+            <p className="block-desc">Все специалисты аттестованы в НИИ</p>
+            <div className="team__list flex-container grid grid-cols-4 gap-[20px]">
+                {teamMembers.map((member, index) => (
+                    <div key={index} className="team__item min-w-full">
+                        <div className="team__item-photo">
+                            <Image
+                                width={265}
+                                height={320}
+                                className="photo-full-size max-w-[265px] max-h-[320px] rounded-[15px]"
+                                src={member.photo}
+                                alt={member.name}
+                            />
+                        </div>
+                        <p className="team__item-name">{member.name}</p>
+                        <p className="team__item-about">{member.position}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+};
+
+export default OurTeam;

@@ -1,17 +1,27 @@
-import About from "@/components/pagesDetails/about";
-import Categories from "@/components/product/categories";
-import Main from "@/components/pagesDetails/main";
-import OurTeam from "@/components/pagesDetails/ourTeam";
-import Services from "@/components/pagesDetails/services";
+import Main from "@/components/main";
+import Advantages from "@/components/advantages";
+import Pricing from "@/components/pricing";
+import Reasons from "@/components/reasons";
+import Works from "@/components/works";
+import Banner from "@/components/banner";
+import Clients from "@/components/clients";
+import Reviews from "@/components/reviews";
+import OurTeam from "@/components/ourTeam";
+import Contacts from "@/components/contacts";
 
-export default function page() {
+export default function Home() {
     return (
         <>
             <Main />
-            <Categories />
-            <About />
-            <Services />
+            <Advantages />
+            <Pricing />
+            <Reasons />
+            <Works />
+            <Banner />
+            <Clients />
+            <Reviews />
             <OurTeam />
+            <Contacts />
         </>
     );
 }
