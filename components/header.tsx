@@ -105,14 +105,14 @@ export default function Header() {
 
                     {/* header__right appears here on mobile */}
                     <div className="mt-4 flex flex-col gap-3">
-                        <a href="tel:+78129020290" className="header__phone">
+                        <a href="tel:+78124071142" className="header__phone">
                             <Image
                                 src="/icons/call.png"
                                 width={24}
                                 height={24}
                                 alt="phone"
                             />
-                            <span>+7 (812) 902-02-90</span>
+                            <span> +7 (812) 407-11-42</span>
                         </a>
                         <button className="blue-btn header__btn js-popup-link">
                             Калькулятор

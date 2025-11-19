@@ -3,15 +3,27 @@ import React, { useState } from "react";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 function Contacts() {
     const [phone, setPhone] = useState("");
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Отправка формы:", {
-            phone,
-            theme: "Зафиксировать скидку 25%",
-        });
-    };
+        setLoading(true);
 
+        try {
+            const response = await fetch("/api/send-to-telegram", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name: "не указано", phone }),
+            });
+
+            const data = await response.json();
+            alert(data.message);
+        } catch (error) {
+            alert("Ошибка соединения. Попробуйте еще раз.");
+        } finally {
+            setLoading(false);
+        }
+    };
     return (
         <section className="contacts" id="contacts">
             <div className="content spacer gap-[20px] lg:flex lg:flex-col">
@@ -52,8 +64,8 @@ function Contacts() {
                             Выезд по Санкт-Петербургу и <br />
                             Ленинградской области
                         </p>
-                        <a href="tel:+78129020290" className="contact__phone">
-                            +7 (812) 902-02-90
+                        <a href="tel:+78124071142" className="contact__phone">
+                            +7 (812) 407-11-42
                         </a>
                         <br />
                         <br />

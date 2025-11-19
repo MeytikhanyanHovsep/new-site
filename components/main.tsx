@@ -4,8 +4,10 @@ import Image from "next/image";
 
 type Props = {};
 
-export default function main({}: Props) {
-    const [inpValue, setInpValue] = useState("");
+export default function Main({}: Props) {
+    const [phone, setPhone] = useState("");
+    const [loading, setLoading] = useState(false);
+
     const advantages = [
         {
             icon: "/icons/user.png",
@@ -34,6 +36,26 @@ export default function main({}: Props) {
         },
     ];
 
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+
+        try {
+            const response = await fetch("/api/send-to-telegram", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name: "не указано", phone }),
+            });
+
+            const data = await response.json();
+            alert(data.message);
+        } catch (error) {
+            alert("Ошибка соединения. Попробуйте еще раз.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <section className="main content">
             <div className="main__block bg-[url('/main-bg.jpg')] bg-center">
@@ -50,7 +72,7 @@ export default function main({}: Props) {
                             Всего 2 дня скидка <strong>-25%</strong>
                         </p>
                     </div>
-                    <form action="sendmessage.php" className="form">
+                    <form onSubmit={handleSubmit} className="form">
                         <input
                             type="text"
                             name="theme"
@@ -63,11 +85,16 @@ export default function main({}: Props) {
                                 className="form__field"
                                 placeholder="Ваш телефон"
                                 required
-                                value={inpValue}
-                                onChange={(e) => setInpValue(e.target.value)}
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
                             />
-                            <button className="yellow-btn form__btn">
-                                Заказать дезинфекцию
+                            <button
+                                className="yellow-btn form__btn"
+                                disabled={loading}
+                            >
+                                {loading
+                                    ? "Отправка..."
+                                    : " Заказать дезинфекцию"}
                             </button>
                         </div>
                         <p className="form__info">
@@ -101,11 +128,9 @@ export default function main({}: Props) {
                             width={50}
                             height={50}
                             className=" object-contain mb-[5px] min-h-[40px] min-w-[40px]"
-                            alt="virus"
+                            alt={advantage.alt}
                         />
-                        <p className="main__advantage-desc">
-                            Безопасные препараты без запаха
-                        </p>
+                        <p className="main__advantage-desc">{advantage.text}</p>
                     </div>
                 ))}
             </div>

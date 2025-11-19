@@ -81,10 +81,10 @@ const Footer = () => {
                                     Наш телефон:
                                 </p>
                                 <a
-                                    href="tel:+78129020290"
+                                    href="tel:+78124071142"
                                     className="footer__callback-phone"
                                 >
-                                    +7 (812) 902-02-90
+                                    +7 (812) 407-11-42
                                 </a>
                             </div>
                         </div>
