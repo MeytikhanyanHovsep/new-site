@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Уничтожение насекомых от 700₽",
     description: "Уничтожение насекомых от 700₽",
     icons: {
-        icon: "/icons/logo.ico",
+        icon: "/icons/favicon.ico",
     },
 };
 
