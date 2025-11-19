@@ -13,7 +13,7 @@ export default function Clients({}: Props) {
                         src={`/clients/logo-1.png`}
                         width={200}
                         height={40}
-                        className="w-full object-cover min-h-[40px]"
+                        className="w-full object-cover min-h-[40px] sm:min-h-[30px] sm:max-h-[30px]"
                         alt="client"
                     />
                 </div>
@@ -22,7 +22,7 @@ export default function Clients({}: Props) {
                         src={`/clients/logo-2.png`}
                         width={200}
                         height={40}
-                        className="w-full object-cover min-h-[40px]"
+                        className="w-full object-cover min-h-[40px] sm:min-h-[30px] sm:max-h-[30px]"
                         alt="client"
                     />
                 </div>
@@ -31,7 +31,7 @@ export default function Clients({}: Props) {
                         src={`/clients/logo-3.png`}
                         width={200}
                         height={40}
-                        className="w-full object-cover min-h-[40px]"
+                        className="w-full object-cover min-h-[40px] sm:min-h-[30px] sm:max-h-[30px]"
                         alt="client"
                     />
                 </div>
@@ -40,7 +40,7 @@ export default function Clients({}: Props) {
                         src={`/clients/logo-4.png`}
                         width={200}
                         height={40}
-                        className="w-full object-cover min-h-[40px]"
+                        className="w-full object-cover min-h-[40px] sm:min-h-[30px] sm:max-h-[30px]"
                         alt="client"
                     />
                 </div>
@@ -49,7 +49,7 @@ export default function Clients({}: Props) {
                         src={`/clients/logo-5.png`}
                         width={200}
                         height={40}
-                        className="w-full object-cover min-h-[40px]"
+                        className="w-full object-cover min-h-[40px] sm:min-h-[30px] sm:max-h-[30px]"
                         alt="client"
                     />
                 </div>

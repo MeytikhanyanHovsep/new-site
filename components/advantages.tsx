@@ -14,8 +14,8 @@ export default function Advantages() {
                 </span>{" "}
                 - больше не будут для вас проблемой.
             </p>
-            <div className="advantages__wrap spacer">
-                <div className="advantages__photo">
+            <div className="advantages__wrap !grid grid-cols-2 gap-[40px] md:grid-cols-1 spacer">
+                <div className="advantages__photo min-w-full">
                     <Image
                         src="/advantages-bg.jpg"
                         width={560}
@@ -24,7 +24,7 @@ export default function Advantages() {
                         alt="advantages"
                     />
                 </div>
-                <div className="advantages__right">
+                <div className="advantages__right min-w-full">
                     <div className="advantage">
                         <span className="advantage__number">01</span>
                         <p className="advantage__title">Работаем 24/7</p>

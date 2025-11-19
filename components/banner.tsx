@@ -5,7 +5,7 @@ type Props = {};
 export default function Banner({}: Props) {
     return (
         <section className="app">
-            <div className="content spacer">
+            <div className="content spacer items-center lg:flex lg:flex-col">
                 <div className="app__left">
                     <p className="app__title">
                         Сколько стоит обработка моего помещения?
@@ -14,7 +14,10 @@ export default function Banner({}: Props) {
                         Оставьте заявку и мы свяжемся с вами.
                     </p>
                 </div>
-                <form action="sendmessage.php" className="app__form spacer">
+                <form
+                    action="sendmessage.php"
+                    className="app__form spacer md:flex md:flex-col"
+                >
                     <input
                         type="text"
                         name="name"

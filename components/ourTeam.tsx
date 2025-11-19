@@ -29,14 +29,14 @@ const OurTeam = () => {
         <section className="team content">
             <h2>Наша команда</h2>
             <p className="block-desc">Все специалисты аттестованы в НИИ</p>
-            <div className="team__list flex-container grid grid-cols-4 gap-[20px]">
+            <div className="team__list flex-container md:grid-cols-2 sm:grid-cols-1 grid grid-cols-4 gap-[20px]">
                 {teamMembers.map((member, index) => (
                     <div key={index} className="team__item min-w-full">
-                        <div className="team__item-photo">
+                        <div className="team__item-photo sm:!max-h-[150px] max-h-[320px]">
                             <Image
                                 width={265}
                                 height={320}
-                                className="photo-full-size max-w-[265px] max-h-[320px] rounded-[15px]"
+                                className="photo-full-size w-full object-cover  rounded-[15px]"
                                 src={member.photo}
                                 alt={member.name}
                             />

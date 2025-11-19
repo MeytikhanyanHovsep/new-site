@@ -74,17 +74,17 @@ const Works = () => {
     };
 
     return (
-        <section className="works content">
+        <section className="works content" id="works">
             <h2>Виды обработки</h2>
             <p className="block-desc">
                 Беремся за самые сложные случаи. Все варианты обработки и полный
                 цикл. Работа по договору, заключаем контракты на регулярное
                 обслуживание организаций.
             </p>
-            <div className="works__list !flex !items-start spacer_top">
+            <div className="works__list !flex lg:!grid xs:!grid-cols-1 lg:!grid-cols-2 !items-start spacer_top">
                 {works.map((work, index) => (
                     <React.Fragment key={index}>
-                        <div className="work !min-h-full">
+                        <div className="work !min-h-full lg:w-full">
                             <div className="work__top va-middle">
                                 <span className="work__icon">
                                     <Image
@@ -138,7 +138,7 @@ const Works = () => {
                             )}
                         </div>
                         {index < works.length - 1 && (
-                            <i className="works__colon"></i>
+                            <i className="works__colon lg:hidden"></i>
                         )}
                     </React.Fragment>
                 ))}

@@ -8,12 +8,12 @@ export default {
     ],
     theme: {
         screens: {
-            xs: "320px",
-            sm: "550px",
-            md: "850px",
-            lg: "1000px",
-            xl: "1100px",
-            "2xl": "1280px",
+            "2xl": { max: "1280px" },
+            xl: { max: "1100px" },
+            lg: { max: "1000px" },
+            md: { max: "750px" },
+            sm: { max: "550px" },
+            xs: { max: "400px" },
         },
         colors: {
             deep: "#0F172B",

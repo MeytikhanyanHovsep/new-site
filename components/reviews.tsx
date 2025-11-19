@@ -53,14 +53,14 @@ const Reviews = () => {
     ];
 
     return (
-        <section className="reviews content">
+        <section className="reviews content" id="reviews">
             <div className="reviews__block !pb-[50px]">
-                <div className="reviews__top spacer">
+                <div className="reviews__top sm:grid sm:grid-cols-1 spacer">
                     <h2>
                         Отзывы наших <br />
                         клиентов
                     </h2>
-                    <div className="ratings">
+                    <div className="ratings ">
                         {ratings.map((rating, index) => (
                             <div key={index} className="rating">
                                 <div className="rating__logo">

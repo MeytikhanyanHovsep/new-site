@@ -50,10 +50,10 @@ const Pricing = () => {
     ];
 
     return (
-        <section className="prices content">
+        <section className="prices content" id="pricing">
             <h2>Цены на наши услуги</h2>
 
-            <div className="prices__list grid grid-cols-3 gap-[35px] flex-container">
+            <div className="prices__list grid grid-cols-3 lg:grid-cols-2 md:grid-cols-1 md:gap-[10px] gap-[35px] flex-container">
                 {pricingPlans.map((plan, index) => (
                     <div key={index} className="price min-w-full">
                         <div className="price__top">
@@ -85,7 +85,7 @@ const Pricing = () => {
                 ))}
             </div>
 
-            <div className="types spacer_top">
+            <div className="types spacer_top !flex xl:flex-col">
                 <div className="types__left">
                     <p className="types__title">
                         Работаем на всех типах объектов:
@@ -99,7 +99,7 @@ const Pricing = () => {
                     </button>
                 </div>
 
-                <div className="types__list !grid !grid-cols-4 spacer_top">
+                <div className="types__list !grid md:!grid-cols-2 sm:!grid-cols-1 !grid-cols-4 spacer_top">
                     {objectTypes.map((type, index) => (
                         <div key={index} className="type va-middle">
                             <span className="type__icon">

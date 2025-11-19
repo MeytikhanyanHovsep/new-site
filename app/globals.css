@@ -41,6 +41,10 @@ section {
     vertical-align: baseline
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 footer,
 header,
 nav,
@@ -1918,7 +1922,7 @@ h1 {
     }
 }
 
-@media all and (max-width:1024px) {
+@media all and (max-width:1000px) {
 
     .nav,
     .header__right {
@@ -1952,7 +1956,7 @@ h1 {
     .menu-btn {
         display: block;
         width: 32px;
-        height: 17px;
+        height: 25px;
         border-top: 3px solid #1C1C1C;
         border-bottom: 3px solid #1C1C1C;
         cursor: pointer;
@@ -1972,8 +1976,15 @@ h1 {
         margin: auto
     }
 
+
+
+    .menu-btn.open {
+        border: 0;
+    }
+
     .menu-btn.open:after {
-        transform: rotate(45deg)
+        transform: rotate(45deg);
+
     }
 
     .menu-btn.open:before {
@@ -2398,6 +2409,11 @@ h1 {
 
 @media all and (max-width:550px) {
 
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+
     .footer__advantage:nth-child(3n),
     .main__advantage:nth-child(3n),
     .footer__advantage,
@@ -2692,4 +2708,43 @@ h1 {
     position: absolute;
     text-indent: -30000px;
     width: 0
+}
+
+.nav {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+    .nav {
+        position: absolute;
+        top: 96px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .mobile-menu {
+        width: 100%;
+        padding: 20px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-top: 1px solid #eee;
+    }
+}
+
+
+
+.mobile-link {
+    font-size: 18px;
+    padding: 8px 0;
 }

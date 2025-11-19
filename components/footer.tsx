@@ -34,7 +34,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="content">
                 {/* Преимущества */}
-                <div className="footer__advantages grid grid-cols-5 gap-[20px] flex-container">
+                <div className="footer__advantages grid grid-cols-5 lg:grid-cols-3 !gap-[10px] flex-container sm:grid-cols-2">
                     {advantages.map((advantage, index) => (
                         <div
                             key={index}
@@ -54,42 +54,44 @@ const Footer = () => {
                     ))}
                 </div>
 
-                {/* Основной футер */}
-                <div className="footer__wrap spacer">
-                    <div className="footer__left spacer">
-                        <div className="footer__left-block">
-                            <a href="#" className="logo">
-                                <Image
-                                    src="/icons/footer-2.png"
-                                    width={60}
-                                    height={62}
-                                    className=" object-contain min-w-[60px] mr-[5px]"
-                                    alt="phone"
-                                />
-                                <span>
-                                    <strong>Городская</strong> санитарная служба
-                                </span>
-                            </a>
-                            <p className="footer__title">
-                                100% уничтожение всех видов паразитов, грызунов,
-                                насекомых и плесени
-                            </p>
+                <div className="footer__wrap lg:justify-center lg:flex-col !flex justify-between items-center !sm:pt-0">
+                    <div className="footer__wrap lg:w-full !flex justify-between spacer">
+                        <div className="footer__left !sm:pt-0 spacer !sm:flex sm:flex-col">
+                            <div className="footer__left-block">
+                                <a href="#" className="logo">
+                                    <Image
+                                        src="/icons/logo.png"
+                                        width={60}
+                                        height={62}
+                                        className=" object-contain min-w-[60px] mr-[5px]"
+                                        alt="phone"
+                                    />
+                                    <span>
+                                        <strong>Городская</strong> санитарная
+                                        служба
+                                    </span>
+                                </a>
+                                <p className="footer__title">
+                                    100% уничтожение всех видов паразитов,
+                                    грызунов, насекомых и плесени
+                                </p>
+                            </div>
+                            <div className="footer__callback">
+                                <p className="footer__callback-title">
+                                    Наш телефон:
+                                </p>
+                                <a
+                                    href="tel:+78129020290"
+                                    className="footer__callback-phone"
+                                >
+                                    +7 (812) 902-02-90
+                                </a>
+                            </div>
                         </div>
-                        <div className="footer__callback">
-                            <p className="footer__callback-title">
-                                Наш телефон:
-                            </p>
-                            <a
-                                href="tel:+78129020290"
-                                className="footer__callback-phone"
-                            >
-                                +7 (812) 902-02-90
-                            </a>
-                        </div>
-                    </div>
 
-                    {/* Копирайт */}
-                    <p className="copyright">
+                        {/* Копирайт */}
+                    </div>
+                    <p className="copyright !lg:max-w-[200px] ">
                         ИП Саляхетдинова А.А. ОГРНИП: 324774600310583 ИНН:
                         771615706332
                         <br />

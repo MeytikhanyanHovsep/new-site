@@ -21,13 +21,13 @@ const Reasons = () => {
 
     return (
         <section className="reasons content ">
-            <div className="reasons__block bg-[url('/reasons-bg.jpg')] bg-center">
-                <div className="reasons__left">
+            <div className="reasons__block bg-[#f8f8f8] rounded-[20px] bg-[url('/reasons-bg.jpg')] bg-cover bg-no-repeat bg-center md:!pb-[10px]">
+                <div className="reasons__left  md:!pb-[20px] ">
                     <h2>
                         Что будет <br />
                         если затянуть обработку?
                     </h2>
-                    <div className="reasons__list !grid !grid-cols-2 gap-[10px] spacer_top">
+                    <div className="reasons__list sm:!grid-cols-1 !grid !grid-cols-2 gap-[10px] spacer_top">
                         {reasons.map((reason, index) => (
                             <div
                                 key={index}

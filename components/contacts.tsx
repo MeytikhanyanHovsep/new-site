@@ -1,12 +1,11 @@
 "use client";
 import React, { useState } from "react";
-
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 function Contacts() {
     const [phone, setPhone] = useState("");
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        // Здесь будет логика отправки формы
         console.log("Отправка формы:", {
             phone,
             theme: "Зафиксировать скидку 25%",
@@ -14,9 +13,9 @@ function Contacts() {
     };
 
     return (
-        <section className="contacts">
-            <div className="content spacer">
-                <div className="contacts__left">
+        <section className="contacts" id="contacts">
+            <div className="content spacer gap-[20px] lg:flex lg:flex-col">
+                <div className="contacts__left lg:min-w-full">
                     <p className="contacts__title">Зафиксировать скидку 25%</p>
                     <form
                         action="sendmessage.php"
@@ -62,7 +61,20 @@ function Contacts() {
                         Л064-00111-77/01975185)
                     </div>
                 </div>
-                <div id="map"></div>
+                <div id="map" className="lg:min-w-full">
+                    <YMaps>
+                        <Map
+                            defaultState={{
+                                center: [59.9343, 30.3351],
+                                zoom: 10,
+                            }}
+                            width="100%"
+                            height="400px"
+                        >
+                            <Placemark geometry={[59.9343, 30.3351]} />
+                        </Map>
+                    </YMaps>
+                </div>
             </div>
         </section>
     );

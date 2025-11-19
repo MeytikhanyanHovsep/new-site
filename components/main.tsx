@@ -6,6 +6,33 @@ type Props = {};
 
 export default function main({}: Props) {
     const [inpValue, setInpValue] = useState("");
+    const advantages = [
+        {
+            icon: "/icons/user.png",
+            text: "Безопасные препараты без запаха",
+            alt: "Безопасность",
+        },
+        {
+            icon: "/icons/time.png",
+            text: "Срочный выезд 30 минут 24/7",
+            alt: "Срочный выезд",
+        },
+        {
+            icon: "/icons/mark.png",
+            text: "Гарантия по договору 5 лет",
+            alt: "Гарантия",
+        },
+        {
+            icon: "/icons/bug.png",
+            text: "Повторная обработка бесплатно",
+            alt: "Повторная обработка",
+        },
+        {
+            icon: "/icons/organization.png",
+            text: "Государственная аттестация",
+            alt: "Аттестация",
+        },
+    ];
 
     return (
         <section className="main content">
@@ -63,68 +90,24 @@ export default function main({}: Props) {
                     </p>
                 </div>
             </div>
-            <div className="main__advantages grid grid-cols-5 gap-[20px] flex-container">
-                <div className="main__advantage !pt-[20px] px-[20px] !w-full">
-                    <Image
-                        src="/icons/user.png"
-                        width={50}
-                        height={50}
-                        className=" object-contain mb-[5px] min-h-[40px] min-w-[40px]"
-                        alt="virus"
-                    />
-                    <p className="main__advantage-desc">
-                        Безопасные препараты без запаха
-                    </p>
-                </div>
-                <div className="main__advantage !pt-[20px] px-[20px] !w-full">
-                    <Image
-                        src="/icons/time.png"
-                        width={50}
-                        height={50}
-                        className=" object-contain mb-[5px] min-h-[40px] min-w-[40px]"
-                        alt="virus"
-                    />
-                    <p className="main__advantage-desc">
-                        Срочный выезд <br />
-                        30 минут 24/7
-                    </p>
-                </div>
-                <div className="main__advantage !pt-[20px] px-[20px] !w-full">
-                    <Image
-                        src="/icons/mark.png"
-                        width={50}
-                        height={50}
-                        className=" object-contain mb-[5px] min-h-[40px] min-w-[40px]"
-                        alt="virus"
-                    />
-                    <p className="main__advantage-desc">
-                        Гарантия по договору 5 лет
-                    </p>
-                </div>
-                <div className="main__advantage !pt-[20px] px-[20px] !w-full">
-                    <Image
-                        src="/icons/bug.png"
-                        width={50}
-                        height={50}
-                        className=" object-contain mb-[5px] min-h-[40px] min-w-[40px]"
-                        alt="virus"
-                    />
-                    <p className="main__advantage-desc">
-                        Повторная обработка бесплатно
-                    </p>
-                </div>
-                <div className="main__advantage !pt-[20px] px-[20px] !w-full">
-                    <Image
-                        src="/icons/organization.png"
-                        width={50}
-                        height={50}
-                        className=" object-contain mb-[5px] min-h-[40px] min-w-[40px]"
-                        alt="virus"
-                    />
-                    <p className="main__advantage-desc">
-                        Государственная аттестация
-                    </p>
-                </div>
+            <div className="main__advantages lg:mt-[10px] !grid grid-cols-5 lg:grid-cols-3 !gap-[10px] flex-container sm:grid-cols-2">
+                {advantages.map((advantage, index) => (
+                    <div
+                        key={index}
+                        className="main__advantage !pt-[20px] !m-0 px-[20px] !w-full"
+                    >
+                        <Image
+                            src={advantage.icon}
+                            width={50}
+                            height={50}
+                            className=" object-contain mb-[5px] min-h-[40px] min-w-[40px]"
+                            alt="virus"
+                        />
+                        <p className="main__advantage-desc">
+                            Безопасные препараты без запаха
+                        </p>
+                    </div>
+                ))}
             </div>
         </section>
     );
