@@ -50,9 +50,12 @@ export default function Header() {
                         />
                         <span>+7 (812) 902-02-90</span>
                     </a>
-                    <button className="blue-btn header__btn js-popup-link">
+                    <a
+                        href="#contacts"
+                        className="blue-btn header__btn js-popup-link"
+                    >
                         Калькулятор
-                    </button>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Button */}

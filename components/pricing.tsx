@@ -73,31 +73,20 @@ const Pricing = () => {
                         </ul>
 
                         <div className="price__bottom">
-                            <button
-                                className="blue-btn price__btn js-popup-link"
-                                data-href=".popup-app"
+                            <a
+                                href="#contacts"
+                                className="blue-btn !px-[10px] price__btn js-popup-link"
                                 data-theme={plan.buttonTheme}
                             >
                                 Заказать обработку
-                            </button>
+                            </a>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className="types spacer_top !flex xl:flex-col">
-                <div className="types__left">
-                    <p className="types__title">
-                        Работаем на всех типах объектов:
-                    </p>
-                    <button
-                        className="yellow-btn types__btn js-popup-link"
-                        data-href=".popup-app"
-                        data-theme="Калькулятор"
-                    >
-                        Калькулятор
-                    </button>
-                </div>
+            <div className="types spacer_top !flex items-center xl:flex-col">
+                <p className="types__title">Работаем на всех типах объектов:</p>
 
                 <div className="types__list !grid md:!grid-cols-2 sm:!grid-cols-1 !grid-cols-4 spacer_top">
                     {objectTypes.map((type, index) => (
