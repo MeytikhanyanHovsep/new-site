@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Components from "@/components";
-import Script from "next/script"; // импорт Script
+import MangoWidget from "@/components/mangoWidget";
 
 export const metadata: Metadata = {
     title: "Уничтожение насекомых от 700₽",
@@ -20,11 +20,7 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <Components>{children}</Components>
-
-                <Script
-                    src="//widgets.mango-office.ru/site/37045"
-                    strategy="afterInteractive"
-                />
+                <MangoWidget />
             </body>
         </html>
     );
