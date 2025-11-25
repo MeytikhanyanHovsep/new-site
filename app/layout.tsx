@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Components from "@/components";
+import Script from "next/script"; // импорт Script
 
 export const metadata: Metadata = {
     title: "Уничтожение насекомых от 700₽",
@@ -17,8 +18,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`  `}>
+            <body>
                 <Components>{children}</Components>
+
+                <Script
+                    src="//widgets.mango-office.ru/site/37045"
+                    strategy="afterInteractive"
+                />
             </body>
         </html>
     );

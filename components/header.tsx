@@ -41,14 +41,14 @@ export default function Header() {
                 </nav>
 
                 <div className="header__right">
-                    <a href="tel:+78129020290" className="header__phone">
+                    <a href="tel:+78124071142" className="header__phone">
                         <Image
                             src="/icons/call.png"
                             width={24}
                             height={24}
                             alt="phone"
                         />
-                        <span>+7 (812) 902-02-90</span>
+                        <span>+7 (812) 407-11-42</span>
                     </a>
                     <a
                         href="#contacts"
